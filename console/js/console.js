@@ -51,6 +51,15 @@ Application.prototype = {
             that.java_editor.session.selection.clearSelection();
             that.java_editor.getSession().setScrollTop(that.java_editor.getSession().getScrollTop());
         });
+    },
+
+    load_snippet: function(name) {
+        var that = this;
+        $.get("/content/" + name, function(response) {
+            that.cpp_editor.setValue(response);
+            that.cpp_editor.session.selection.clearSelection();
+            that.translate_code();
+        });
     }
 };
 
