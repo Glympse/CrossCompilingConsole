@@ -9,8 +9,6 @@
 
 namespace Glympse
 {
-namespace Toolbox
-{
 
 /**
  * Simplifies handling of incoming and outgoing Glympse requests in deep messaging integration scenario.
@@ -274,8 +272,7 @@ namespace Toolbox
         }
     }
 };
-    
-}
+
 }
 
 #endif // !REQUESTHELPER_H__TOOLBOX__GLYMPSE__

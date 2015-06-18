@@ -9,8 +9,6 @@
 
 namespace Glympse
 {
-namespace Toolbox
-{
 
 /** 
  * Creates Glympse groups all day long :) 
@@ -405,7 +403,6 @@ namespace Toolbox
     }
 };
 
-}
 }
 
 #endif // !GROUPCREATOR_H__TOOLBOX__GLYMPSE__
