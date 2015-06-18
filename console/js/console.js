@@ -20,6 +20,20 @@ Application.prototype = {
         $("#cpp-source").on('keyup change', function() {
             that.translate_code();
         });
+
+        this.output = "java";
+        $("#menu-java").on('click', function() {
+            that.output = "java";
+            $("#label-output").text("Java");
+
+            that.translate_code();
+        });
+        $("#menu-csharp").on('click', function() {
+            that.output = "csharp";
+            $("#label-output").text("C#");
+
+            that.translate_code();
+        });
     },
 
     setup_editor: function(id, readonly) {
@@ -32,7 +46,7 @@ Application.prototype = {
 
     translate_code: function() {
         var that = this;
-        $.post("/api/v1/translate", this.cpp_editor.getValue(), function(response) {
+        $.post("/api/v1/translate?output=" + this.output, this.cpp_editor.getValue(), function(response) {
             that.java_editor.setValue(response);
             that.java_editor.session.selection.clearSelection();
             that.java_editor.getSession().setScrollTop(that.java_editor.getSession().getScrollTop());

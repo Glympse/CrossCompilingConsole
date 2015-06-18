@@ -18,6 +18,18 @@
                         <li class="active"><a href="#">Home</a></li>
                         <li style="width: 50px;">&nbsp;</li>
                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Output <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="menu-java">
+                                    Java
+                                </a></li>
+                                <li><a href="#" id="menu-csharp">
+                                    C#
+                                </a></li>
+                            </ul>
+                        </li>
+                        <li style="width: 50px;">&nbsp;</li>
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Source <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://github.com/Glympse/CrossCompiling" target="_blank">
@@ -48,7 +60,7 @@
                 <div class="col-md-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Java</h3>
+                            <h3 class="panel-title" id="label-output">Java</h3>
                         </div>
                         <div class="panel-body">
                             <div class="code" id="java-result"></div>
