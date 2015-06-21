@@ -8,12 +8,12 @@ Application.prototype = {
         this.cpp_editor = this.setup_editor("cpp-source", false);
         this.cpp_editor.getSession().setMode("ace/mode/c_cpp");
         this.cpp_editor.getSession().on('changeScrollTop', function(scroll) {
-            that.java_editor.getSession().setScrollTop(scroll);
+            that.output_editor.getSession().setScrollTop(scroll);
         });
 
-        this.java_editor = this.setup_editor("java-result", true);
-        this.java_editor.getSession().setMode("ace/mode/java");
-        this.java_editor.getSession().on('changeScrollTop', function(scroll) {
+        this.output_editor = this.setup_editor("output-source", true);
+        this.output_editor.getSession().setMode("ace/mode/java");
+        this.output_editor.getSession().on('changeScrollTop', function(scroll) {
             that.cpp_editor.getSession().setScrollTop(scroll);
         });
 
@@ -23,16 +23,16 @@ Application.prototype = {
 
         this.output = "java";
         $("#menu-java").on('click', function() {
-            that.output = "java";
             $("#label-output").text("Java");
+            that.output_editor.getSession().setMode("ace/mode/java");
 
-            that.translate_code();
+            that.translate_code("java");
         });
         $("#menu-csharp").on('click', function() {
-            that.output = "csharp";
             $("#label-output").text("C#");
+            that.output_editor.getSession().setMode("ace/mode/csharp");
 
-            that.translate_code();
+            that.translate_code("csharp");
         });
     },
 
@@ -44,12 +44,15 @@ Application.prototype = {
         return editor;
     },
 
-    translate_code: function() {
+    translate_code: function(output) {
+        if ( output ) {
+            this.output = output;
+        }
         var that = this;
         $.post("/api/v1/translate?output=" + this.output, this.cpp_editor.getValue(), function(response) {
-            that.java_editor.setValue(response);
-            that.java_editor.session.selection.clearSelection();
-            that.java_editor.getSession().setScrollTop(that.java_editor.getSession().getScrollTop());
+            that.output_editor.setValue(response);
+            that.output_editor.session.selection.clearSelection();
+            that.output_editor.getSession().setScrollTop(that.output_editor.getSession().getScrollTop());
         });
     },
 
