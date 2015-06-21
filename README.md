@@ -11,8 +11,13 @@ The console is accessible at:
   <img width="100%" src="https://docs.google.com/drawings/u/1/d/1-ge6R72NhFnRe330QG4QXn-KpbALWW_VdVa2Uo0VLT8/pub?w=960&h=661">
 </div>
 
+## References
+
+Cross Compiler library <br>
+[https://github.com/Glympse/CrossCompiling](https://github.com/Glympse/CrossCompiling)
+
 ## License
 
-Code is licensed under the [The MIT License](http://opensource.org/licenses/MIT). 
+Code is licensed under the [The MIT License](http://opensource.org/licenses/MIT).
 
 Documentation is licensed under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
