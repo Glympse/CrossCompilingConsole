@@ -1,7 +1,10 @@
 {
-    "dependencies": [
-        "java.lang.*",
-        "java.util.*",
-        "java.io.*"
-    ]
+  "dependencies": [
+    "java.lang.*",
+    "java.util.*",
+    "java.io.*"
+  ],
+  "packages": [
+    {}
+  ]
 }

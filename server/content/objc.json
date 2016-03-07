@@ -1,0 +1,73 @@
+{
+  "dependencies": [
+    "Internal.h"
+  ],
+  "packages": [
+    {
+      "types": [],
+      "sinks": [],
+      "private": [],
+      "hierarchy": {}
+    }
+  ],
+  "types": {
+    "void": {
+      "objc_name": "void",
+      "objc_type": "void",
+      "objc_arg_name": "Void",
+      "cpp_type": "void",
+      "cpp_arg_type": "void",
+      "native": true
+    },
+    "int": {
+      "objc_name": "int",
+      "objc_type": "int",
+      "objc_arg_name": "Int",
+      "cpp_type": "int",
+      "cpp_arg_type": "int",
+      "native": true
+    },
+    "long": {
+      "objc_name": "long long int",
+      "objc_type": "long long int",
+      "objc_arg_name": "LongLongInt",
+      "cpp_type": "long long int",
+      "cpp_arg_type": "long long int",
+      "native": true
+    },
+    "float": {
+      "objc_name": "float",
+      "objc_type": "float",
+      "objc_arg_name": "Float",
+      "cpp_type": "float",
+      "cpp_arg_type": "float",
+      "native": true
+    },
+    "double": {
+      "objc_name": "double",
+      "objc_type": "double",
+      "objc_arg_name": "Double",
+      "cpp_type": "double",
+      "cpp_arg_type": "double",
+      "native": true
+    },
+    "boolean": {
+      "objc_name": "BOOL",
+      "objc_type": "BOOL",
+      "objc_arg_name": "Bool",
+      "cpp_type": "bool",
+      "cpp_arg_type": "bool",
+      "native": true
+    },
+    "String": {
+      "objc_name": "NSString",
+      "objc_type": "NSString*",
+      "objc_arg_name": "NSString",
+      "cpp_type": "Glympse::GString",
+      "cpp_arg_type": "const Glympse::GGString&",
+      "native": false
+    }
+  },
+  "undefined": [],
+  "protocols": []
+}
