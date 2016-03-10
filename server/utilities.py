@@ -3,6 +3,7 @@ import signal
 import tornado.httpserver
 import tornado.ioloop
 
+
 class File:
     @staticmethod
     def root():
@@ -20,6 +21,7 @@ class File:
         file = open(name, "w")
         file.write(content)
         file.close()
+
 
 class TornadoServer:
     def __init__(self, app, port):

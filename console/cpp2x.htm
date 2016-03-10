@@ -15,24 +15,25 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="cpp2x.htm">Cpp to Jave/C#</a></li>
+                        <li><a href="java2objc.htm">Java to Objective-C</a></li>
                         <li style="width: 50px;">&nbsp;</li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" onclick="app.load_snippet('ICommon.h');">ICommon.h</a></li>
-                                <li><a href="#" onclick="app.load_snippet('IComparable.h');">IComparable.h</a></li>
-                                <li><a href="#" onclick="app.load_snippet('IPrimitive.h');">IPrimitive.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/ICommon.h');">ICommon.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/IComparable.h');">IComparable.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/IPrimitive.h');">IPrimitive.h</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#" onclick="app.load_snippet('LatLng.h');">LatLng.h</a></li>
-                                <li><a href="#" onclick="app.load_snippet('NodeList.h');">NodeList.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/LatLng.h');">LatLng.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/NodeList.h');">NodeList.h</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#" onclick="app.load_snippet('IMutex.h');">IMutex.h</a></li>
-                                <li><a href="#" onclick="app.load_snippet('IBatteryListener.h');">IBatteryListener.h</a></li>
-                                <li><a href="#" onclick="app.load_snippet('IBatteryProvider.h');">IBatteryProvider.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/IMutex.h');">IMutex.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/IBatteryListener.h');">IBatteryListener.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/IBatteryProvider.h');">IBatteryProvider.h</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#" onclick="app.load_snippet('GroupCreator.h');">GroupCreator.h</a></li>
-                                <li><a href="#" onclick="app.load_snippet('RequestHelper.h');">RequestHelper.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/GroupCreator.h');">GroupCreator.h</a></li>
+                                <li><a href="#" onclick="app.load_snippet('cpp/RequestHelper.h');">RequestHelper.h</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -71,14 +72,14 @@
                             <h3 class="panel-title">Cpp</h3>
                         </div>
                         <div class="panel-body">
-                            <div class="code" id="cpp-source"></div>
+                            <div class="code" id="input-source"></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title" id="label-output">Java</h3>
+                            <h3 class="panel-title" id="label-output"></h3>
                         </div>
                         <div class="panel-body">
                             <div class="code" id="output-source"></div>
@@ -94,7 +95,7 @@
                     Code is licensed under the <a href="http://opensource.org/licenses/MIT">The MIT License</a>.
                 </span>
                 <span class="pull-right">
-                    Powered by Glympse &copy; 2015
+                    Powered by Glympse &copy; 2016
                 </span>
             </div>
         </div>
@@ -111,5 +112,9 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
         <script src="js/console.js"></script>
+        <script>
+            var app = new Application();
+            app.init("cpp", "java", true);
+        </script>
     </body>
 </html>
